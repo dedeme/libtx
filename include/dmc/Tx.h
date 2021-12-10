@@ -1,10 +1,12 @@
 // Copyright 05-Aug-2019 ºDeme
 // GNU General Public License - V3 <http://www.gnu.org/licenses/>
 
+/// Structure to fast read texts
+
 #ifndef DMC_TX_H
   #define DMC_TX_H
 
-///
+/// Structure to fast read texts
 typedef struct tx_Tx Tx;
 
 ///
@@ -29,7 +31,7 @@ Tx *tx_right (Tx *this, int begin);
 Tx *tx_left (Tx *this, int end);
 
 /// Splits 'this' in 'left' and 'right'. For example:
-///   Tx *l; Tx *r; spit(&l, &r, "abc", 2); // -> l = "ab", r = "c".
+///   Tx *l; Tx *r; split(&l, &r, "abc", 2); // -> l = "ab", r = "c".
 /// Range of ix is between 0 and tx_length(this)
 void tx_split (Tx **left, Tx **right, Tx *this, int ix);
 
